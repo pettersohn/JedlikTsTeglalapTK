@@ -24,7 +24,7 @@ export default class Content {
         res.write("<h1>Téglalap kerülete és területe</h1>");
         const a: number = 5; // number = 64 bites lebegőpontos szám
         const b: number = 4;
-        res.write(`<h3>a=${a}<h3>` + a);
+        res.write(`<h3>a=${a}<h3>`);
         res.write("b=" + b);
         res.write("</body>");
         res.write("</html>");
