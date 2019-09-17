@@ -26,8 +26,9 @@ export default class Content {
         res.write("<p>b= ");
         res.write(`<input type='number' name='bInput' value=${b} onChange='this.form.submit();'`);
         res.write("</p>");
-        const terulet: number = a * b;
-        const kerulet: number =  2 * (a + b);
+        let terulet: number; // deklarálás
+        terulet = a * b;
+        const kerulet: number =  2 * (a + b); // definiálás
         res.write(`<p>T=${terulet}</p>`);
         res.write(`<p>K=${kerulet}</p>`);
         res.write("</form></body>");
