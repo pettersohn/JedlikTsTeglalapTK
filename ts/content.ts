@@ -17,8 +17,8 @@ export default class Content {
         res.write("<h1>Téglalap kerülete és területe</h1>");
         const query: ParsedUrlQuery = url.parse(req.url, true).query;
         // tslint:disable-next-line: max-line-length
-        const a: number = query.aInput === undefined ? 5 : parseFloat(query.aInput as string); // number = 64 bites lebegőpontos szám
-        const b: number = query.bInput === undefined ? 6 : parseFloat(query.bInput as string);
+        const a: number = query.aInput === undefined || query.aInput === "" ? 5 : parseFloat(query.aInput as string); // number = 64 bites lebegőpontos szám
+        const b: number = query.bInput === undefined || query.bInput === "" ? 6 : parseFloat(query.bInput as string);
         res.write("<p>a= ");
         res.write(`<input type='number' name='aInput' value=${a} onChange='this.form.submit();'`);
         res.write("</p>");
